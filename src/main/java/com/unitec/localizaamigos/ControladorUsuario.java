@@ -27,11 +27,18 @@ public class ControladorUsuario {
 
    //aYUDA DEL PUNTO 7
    @PostMapping("/usuario")
-   public XXX registrar(@RequestBody String json)throws  Exception{
+   public Estatus registrar(@RequestBody String json)throws  Exception{
+       //Esta clase sirve para mapear un objeto json a Java y vice-versa
       ObjectMapper objectMapper=new ObjectMapper();
+
      Usuario usuario= objectMapper.readValue(json, Usuario.class);
       repoUsuario.save(usuario);
-      return XXX;
+       System.out.println("LLego el objeto"+json);
+
+      Estatus estatus=new Estatus();
+      estatus.mensaje="Registrado con exito";
+      estatus.success=true;
+      return estatus;
    }
 
 }
