@@ -36,8 +36,8 @@ public class ControladorUsuario {
        System.out.println("LLego el objeto"+json);
 
       Estatus estatus=new Estatus();
-      estatus.mensaje="Registrado con exito";
-      estatus.success=true;
+      estatus.setMensaje("Registro guardado");
+      estatus.setSuccess(true);
       return estatus;
    }
 
