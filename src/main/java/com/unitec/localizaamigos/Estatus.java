@@ -4,11 +4,8 @@ public class Estatus {
 
 
 
-    String mensaje;
-    boolean success;
-
-    public Estatus() {
-    }
+    private String mensaje;
+    private boolean success;
 
     public String getMensaje() {
         return mensaje;
