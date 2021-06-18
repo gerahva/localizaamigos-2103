@@ -36,7 +36,7 @@ public class ControladorUsuario {
        System.out.println("LLego el objeto"+json);
 
       Estatus estatus=new Estatus();
-      estatus.setMensaje("Registro realizado con exito");
+      estatus.setMensaje("Registro realizado con exito, todo bien!!");
       estatus.setSuccess(true);
       return estatus;
    }
