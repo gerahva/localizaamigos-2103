@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class ControladorLocalizacion {
     @Autowired RepoUsuario repoUsuario;
 
-   @PostMapping("/localizacion")
+   @PostMapping("/localizaciones")
     public Estatus guardarLocalizacion(@RequestBody String json)throws  Exception{
        //Verificar que el modelo Usuario en el bck end ya tenga la localizacion
        //Primero leemos el objeto json que es de tipo usuario
