@@ -1,8 +1,12 @@
 package com.unitec.localizaamigos;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.Id;
 
+import java.util.ArrayList;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Usuario {
     private String nombre;
 
@@ -11,6 +15,15 @@ public class Usuario {
 
     private  String nickname;
 
+    private ArrayList<Localizacion> localizacion;
+
+    public ArrayList<Localizacion> getLocalizacion() {
+        return localizacion;
+    }
+
+    public void setLocalizacion(ArrayList<Localizacion> localizacion) {
+        this.localizacion = localizacion;
+    }
 
     public Usuario(){
 
