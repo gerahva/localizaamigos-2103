@@ -30,10 +30,15 @@ public class ControladorLocalizacion {
 
 
            locaGuardadas.add(usuarioLLegado.getLocalizacion().get(0));
-           //Agregamos el mensaje del estatus
+           //guardamos nuevamente el usuario pero ya con su localizacion
+                 usuarioGuardado.setLocalizacion(locaGuardadas);
+            //Guardamos nuevamente el usuario
+            repoUsuario.save(usuarioGuardado);
 
+       //Generamos el estatus
                  estatus.setSuccess(true);
                  estatus.setMensaje("Localizacion agregada con exito");
+
 
              }else{
                 //Si llega aqui, no esta registrado.
