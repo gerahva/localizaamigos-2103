@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 
 @RestController
@@ -28,6 +30,12 @@ public class ControladorLocalizacion {
                  ArrayList<Localizacion> locaGuardadas=new ArrayList<>();
           if(usuarioGuardado.getLocalizacion()!=null)locaGuardadas=usuarioGuardado.getLocalizacion();
 
+
+          //Le asignamos fecha
+         Localizacion locaLlegada=        usuarioLLegado.getLocalizacion().get(0) ;
+         //Fecha y hora
+
+         locaLlegada.setFecha( LocalDate.now().toString()+"/"+ LocalTime.now());
 
            locaGuardadas.add(usuarioLLegado.getLocalizacion().get(0));
            //guardamos nuevamente el usuario pero ya con su localizacion
