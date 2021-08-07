@@ -29,8 +29,6 @@ public class ControladorLocalizacion {
           //Primero checamos que exista el arraylist
                  ArrayList<Localizacion> locaGuardadas=new ArrayList<>();
           if(usuarioGuardado.getLocalizacion()!=null)locaGuardadas=usuarioGuardado.getLocalizacion();
-
-
           //Le asignamos fecha
          Localizacion locaLlegada=        usuarioLLegado.getLocalizacion().get(0) ;
          //Fecha y hora
@@ -74,5 +72,8 @@ public class ControladorLocalizacion {
            }
            return usuariosRegistrados;
     }
+
+
+
 
 }
