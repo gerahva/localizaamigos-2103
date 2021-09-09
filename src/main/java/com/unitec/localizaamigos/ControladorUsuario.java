@@ -33,7 +33,7 @@ public class ControladorUsuario {
 
      Usuario usuario= objectMapper.readValue(json, Usuario.class);
       repoUsuario.save(usuario);
-       System.out.println("LLego el objeto"+json);
+       System.out.println("LLego el objeto que es el usuaio a regustrar"+json);
 
       Estatus estatus=new Estatus();
       estatus.setMensaje("Registro realizado con exito, todo bien!!");
